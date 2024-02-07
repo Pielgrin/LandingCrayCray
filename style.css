@@ -1,0 +1,66 @@
+
+    body, html {
+        height: 100%;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #E4DFCC;
+    }
+    .container {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end; /* Align items to the bottom */
+        align-items: center;
+        padding: 20px;
+        padding-bottom: 0px;
+        box-sizing: border-box;
+    }
+    h2 {
+        font-weight: bold;
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 10vh; /* Reduced bottom margin */
+    }
+    .app-image {
+        height: auto;
+        max-width: 300px;
+    }
+    @media screen and (max-width: 768px) {
+        h2 {
+            font-size: 30px; /* Smaller font size on smaller screens */
+        }
+    }
+    @media screen and (max-width: 480px) {
+        h2 {
+            font-size: 25px; /* Even smaller font size on very small screens */
+        }
+        .app-image {
+            max-width: 90%; /* Make the image take up more width on very small screens */
+        }
+    }
+
+    /* Pour iPad Air et iPad Mini en mode portrait */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) { 
+  h2 {
+      font-size: 35px; /* Taille de police ajustée pour l'iPad en mode portrait */
+  }
+  .app-image {
+      max-width: 80%; /* Largeur d'image ajustée pour l'iPad en mode portrait */
+  }
+}
+
+/* Pour iPad Air et iPad Mini en mode paysage */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) { 
+  h2 {
+      font-size: 35px; /* Taille de police ajustée pour l'iPad en mode paysage */
+  }
+  .app-image {
+      max-width: 50%; /* Largeur d'image ajustée pour l'iPad en mode paysage */
+  }
+}
